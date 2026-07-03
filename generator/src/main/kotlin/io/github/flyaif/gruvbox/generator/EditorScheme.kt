@@ -96,7 +96,9 @@ fun editorSchemeFor(variant: Variant): EditorScheme = with(Palette) {
     attr("DEFAULT_STATIC_METHOD", fg = brightGreen, italic = true)
     attr("DEFAULT_CLASS_NAME", fg = brightYellow) // Type -> GruvboxYellow
     attr("DEFAULT_CLASS_REFERENCE", fg = brightYellow)
-    attr("DEFAULT_INTERFACE_NAME", fg = brightYellow, italic = true)
+    // interfaces stay upright: vim doesn't slant types, and Java code is
+    // interface-dense enough that italics here slant half the file
+    attr("DEFAULT_INTERFACE_NAME", fg = brightYellow)
     attr("DEFAULT_METADATA", fg = brightBlue) // javaAnnotation -> GruvboxBlue
     attr("DEFAULT_TAG", fg = brightBlue) // xmlTag -> GruvboxBlue
     attr("DEFAULT_ATTRIBUTE", fg = brightAqua) // xmlAttrib -> GruvboxAqua
@@ -186,7 +188,7 @@ fun editorSchemeFor(variant: Variant): EditorScheme = with(Palette) {
     attr("CLASS_NAME_ATTRIBUTES", fg = brightYellow) // Type -> GruvboxYellow
     attr("ANONYMOUS_CLASS_NAME_ATTRIBUTES", fg = brightYellow)
     attr("ABSTRACT_CLASS_NAME_ATTRIBUTES", fg = brightYellow)
-    attr("INTERFACE_NAME_ATTRIBUTES", fg = brightYellow, italic = true)
+    attr("INTERFACE_NAME_ATTRIBUTES", fg = brightYellow)
     attr("ENUM_NAME_ATTRIBUTES", fg = brightYellow)
     attr("TYPE_PARAMETER_NAME_ATTRIBUTES", fg = brightAqua) // Structure -> GruvboxAqua
     attr("INSTANCE_FIELD_ATTRIBUTES", fg = brightBlue) // Identifier -> GruvboxBlue
@@ -197,6 +199,10 @@ fun editorSchemeFor(variant: Variant): EditorScheme = with(Palette) {
     attr("METHOD_CALL_ATTRIBUTES", fg = brightGreen)
     attr("CONSTRUCTOR_CALL_ATTRIBUTES", fg = brightGreen)
     attr("STATIC_METHOD_ATTRIBUTES", fg = brightGreen, italic = true)
+    // Java has its own doc-tag keys; without these overrides Darcula's
+    // underline leaks through the parent scheme (visible on @param values)
+    attr("DOC_COMMENT_TAG", fg = brightAqua) // javaDocTags -> GruvboxAqua
+    attr("DOC_COMMENT_TAG_VALUE", fg = fg3)
 
     // --- XML / HTML ---------------------------------------------------------
     attr("XML_TAG", fg = brightBlue) // xmlTag -> GruvboxBlue
