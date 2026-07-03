@@ -27,6 +27,10 @@ intellijPlatform {
             changelog.renderItem(changelog.getUnreleased(), Changelog.OutputType.HTML)
         }
     }
+
+    publishing {
+        token = providers.environmentVariable("PUBLISH_TOKEN")
+    }
 }
 
 changelog {

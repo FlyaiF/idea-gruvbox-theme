@@ -44,6 +44,18 @@ mapping in `generator/src/main/kotlin/` (see
 CI regenerates the themes and fails if the committed files have drifted from
 the palette definition.
 
+### Releasing
+
+1. Set the new version in `gradle.properties` and describe the changes under
+   `## [Unreleased]` in `CHANGELOG.md`; commit.
+2. Tag and push: `git tag v0.2.0 && git push origin main v0.2.0`.
+3. The Release workflow rebuilds, attaches the zip to a GitHub release, and —
+   when a Marketplace `PUBLISH_TOKEN` repository secret is configured —
+   publishes to the JetBrains Marketplace. (The very first Marketplace upload
+   must be done manually through plugins.jetbrains.com.)
+4. Afterwards run `./gradlew patchChangelog` to move the Unreleased notes
+   under the released version heading, and commit.
+
 ### Mapping philosophy
 
 Every color assignment gruvbox.vim makes is ported verbatim (keywords red,
