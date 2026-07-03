@@ -27,6 +27,7 @@ jobs:
       - name: Verify committed theme files match the palette definition
         run: |
           ./gradlew generateThemes
+          git add -N src/main/resources/themes
           git diff --exit-code src/main/resources/themes
 
       - name: Build plugin

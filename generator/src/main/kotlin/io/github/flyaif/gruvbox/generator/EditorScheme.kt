@@ -226,6 +226,8 @@ fun editorSchemeFor(variant: Variant): EditorScheme = with(Palette) {
     attr("PROPERTIES.INVALID_STRING_ESCAPE", fg = brightRed)
 
     // --- JavaScript ---------------------------------------------------------
+    // Deviation: javaScriptFunction -> GruvboxAqua is not ported; IDEA has no
+    // attribute for the `function` keyword alone, so it stays keyword-red.
     attr("JS.REGEXP", fg = brightOrange) // Special -> GruvboxOrange
     attr("JS.GLOBAL_VARIABLE", fg = brightBlue) // javaScriptMember spirit
 

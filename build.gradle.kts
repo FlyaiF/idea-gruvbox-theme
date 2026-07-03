@@ -1,3 +1,5 @@
+import org.jetbrains.changelog.Changelog
+
 plugins {
     id("java")
     id("org.jetbrains.intellij.platform")
@@ -20,7 +22,16 @@ intellijPlatform {
             sinceBuild = "242"
             untilBuild = provider { null }
         }
+
+        changeNotes = provider {
+            changelog.renderItem(changelog.getUnreleased(), Changelog.OutputType.HTML)
+        }
     }
+}
+
+changelog {
+    repositoryUrl = providers.gradleProperty("pluginRepositoryUrl")
+    groups.empty()
 }
 
 // Convenience alias so `./gradlew generateThemes` works from the root.

@@ -312,6 +312,8 @@ fun uiThemeFor(variant: Variant): UiTheme = with(Palette) {
             "Objects.GreenAndroid" to brightGreen.hex,
             "Objects.Blue" to brightBlue.hex,
             "Objects.Purple" to brightPurple.hex,
+            // text drawn on colored object icons; fixed medium bg0 on purpose —
+            // it must contrast with the icon fill, not match the editor background
             "Objects.BlackText" to Palette.bg0.hex,
         ),
     )

@@ -9,7 +9,8 @@
         <ul>
             <li>Three dark variants: Hard, Medium, and Soft contrast</li>
             <li>Vim-faithful syntax mapping: keywords red, strings green, types yellow</li>
-            <li>Hand-tuned editor schemes for Java, XML, properties, YAML, JSON, Gradle, SQL, and JavaScript</li>
+            <li>Explicit editor color scheme coverage for Java, XML, properties, YAML, JSON, and JavaScript;
+                Gradle scripts, SQL, and other languages inherit the same gruvbox defaults</li>
         </ul>
     ]]></description>
 

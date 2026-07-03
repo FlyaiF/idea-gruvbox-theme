@@ -11,7 +11,7 @@ the New UI exclusively (IDE 2024.2+).
 
 ## Variants
 
-| Theme | Background |
+| Variant | Background |
 | --- | --- |
 | Gruvbox Dark Hard | `#1d2021` |
 | Gruvbox Dark Medium | `#282828` |
@@ -51,6 +51,12 @@ strings green, types yellow, annotations blue, javadoc tags aqua…). IDEA
 attributes that Vim has no concept of — fields, parameters, semantic
 highlighting — are derived in the same spirit, with the reasoning recorded
 as comments in `EditorScheme.kt`.
+
+Java, XML, properties, YAML, JSON, and JavaScript have explicit
+language-specific attributes. Gradle scripts, SQL, and everything else
+inherit the gruvbox `DEFAULT_*` attributes (keywords, strings, numbers…),
+with Darcula as the fallback for anything unmapped — dark and readable,
+never broken.
 
 ## Credits
 
