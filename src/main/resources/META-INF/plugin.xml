@@ -1,0 +1,23 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>io.github.flyaif.gruvbox</id>
+    <name>Gruvbox Revival</name>
+    <vendor url="https://github.com/flyaif/idea-gruvbox-theme">flyaif</vendor>
+    <description><![CDATA[
+        <p>Retro groove colors for IntelliJ, faithful to the original
+        <a href="https://github.com/morhetz/gruvbox">gruvbox</a> Vim theme — built Java-first and for the New UI.</p>
+        <ul>
+            <li>Three dark variants: Hard, Medium, and Soft contrast</li>
+            <li>Vim-faithful syntax mapping: keywords red, strings green, types yellow</li>
+            <li>Hand-tuned editor schemes for Java, XML, properties, YAML, JSON, Gradle, SQL, and JavaScript</li>
+        </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="io.github.flyaif.gruvbox.dark.hard" path="/themes/gruvbox-dark-hard.theme.json"/>
+        <themeProvider id="io.github.flyaif.gruvbox.dark.medium" path="/themes/gruvbox-dark-medium.theme.json"/>
+        <themeProvider id="io.github.flyaif.gruvbox.dark.soft" path="/themes/gruvbox-dark-soft.theme.json"/>
+    </extensions>
+</idea-plugin>
