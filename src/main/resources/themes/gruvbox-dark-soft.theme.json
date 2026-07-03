@@ -101,6 +101,7 @@
     "Component": {
       "borderColor": "bg2",
       "focusedBorderColor": "bg4",
+      "focusWidth": 1,
       "focusColor": "orange",
       "errorFocusColor": "red",
       "inactiveErrorFocusColor": "redFaded",

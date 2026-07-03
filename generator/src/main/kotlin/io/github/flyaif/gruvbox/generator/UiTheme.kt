@@ -114,6 +114,8 @@ fun uiThemeFor(variant: Variant): UiTheme = with(Palette) {
         "Component" to linkedMapOf(
             "borderColor" to "bg2",
             "focusedBorderColor" to "bg4",
+            // 1px keeps the orange accent crisp; the default 2px reads as a fat glow
+            "focusWidth" to 1,
             "focusColor" to "orange",
             "errorFocusColor" to "red",
             "inactiveErrorFocusColor" to "redFaded",
