@@ -135,6 +135,9 @@ fun editorSchemeFor(variant: Variant): EditorScheme = with(Palette) {
     attr("FOLLOWED_HYPERLINK_ATTRIBUTES", fg = brightPurple, effect = brightPurple, effectType = EffectType.UNDERLINE)
     attr("CTRL_CLICKABLE", fg = brightBlue, effect = brightBlue, effectType = EffectType.UNDERLINE)
 
+    // injected fragments (SQL in MyBatis XML, regex in strings): Darcula's cold
+    // green background leaks through the parent scheme otherwise
+    attr("INJECTED_LANGUAGE_FRAGMENT", bg = bg1)
     attr("MATCHED_BRACE_ATTRIBUTES", bg = bg3, bold = true) // MatchParen -> bg3 bold
     attr("UNMATCHED_BRACE_ATTRIBUTES", bg = neutralRed.blendOver(bg0, 0.4))
     attr("FOLDED_TEXT_ATTRIBUTES", fg = gray, bg = bg1, italic = true) // Folded

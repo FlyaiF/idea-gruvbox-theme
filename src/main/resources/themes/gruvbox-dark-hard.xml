@@ -309,6 +309,11 @@
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
+    <option name="INJECTED_LANGUAGE_FRAGMENT">
+      <value>
+        <option name="BACKGROUND" value="3c3836" />
+      </value>
+    </option>
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
         <option name="BACKGROUND" value="665c54" />
